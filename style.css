@@ -4,7 +4,12 @@
     clear: both;
 }
 
-ul {
+ul,
+body,
+img,
+span,
+h1,
+h2 {
     margin: 0;
     padding: 0;
 }
@@ -17,12 +22,23 @@ li {
     list-style: none;
 }
 
-.topNavBar {
-    height: 70px;
-    margin: 0 65px;
+body {
+    background-color: #efefef;
 }
 
-.topNavBar > .logo {
+.topNavBar {
+    height: 70px;
+    /* margin: 0 65px; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.topNavBar-inner {
+    margin: 0 20px;
+}
+
+.topNavBar>.topNavBar-inner>.logo {
     line-height: 70px;
     font-size: 30px;
     font-weight: bold;
@@ -31,27 +47,167 @@ li {
     float: left;
 }
 
-.topNavBar > .logo > .rs {
+.topNavBar>.topNavBar-inner>.logo>.rs {
     color: #e8676b;
     margin-right: 3px;
 }
 
-.topNavBar > nav > ul {
+.topNavBar nav>ul {
     float: right;
 }
 
-.topNavBar > nav > ul > li {
+.topNavBar nav>ul>li {
     float: left;
     margin: 22px 0 0 30px;
 }
 
-.topNavBar > nav > ul > li > a {
+.topNavBar nav>ul>li>a {
     color: #c1c3c6;
     line-height: 30px;
     border-bottom: 3px solid transparent;
     display: block;
 }
 
-.topNavBar > nav > ul > li > a:hover {
+.topNavBar nav>ul>li>a:hover {
     border-bottom: 3px solid #e8676b;
+}
+
+.topBg {
+    height: 515px;
+    /* background-color: red; */
+    background: url(./images/20180129080919_CAsdU.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.topBg:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 515px;
+    background-color: rgba(24, 9, 9, 0.6);
+}
+
+.myCard {
+    max-width: 930px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 50px 0 0;
+    display: grid;
+    grid-template-columns: 410px 520px;
+    grid-template-rows: 400px 85px;
+    margin-top: -340px;
+    position: relative;
+}
+
+.myCard img {
+    width: 300px;
+    height: 350px;
+    margin-left: 50px;
+    object-fit: cover;
+}
+
+.myCard .main:before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 30px solid transparent;
+    border-left-color: #e8676b;
+    border-radius: 0 0 0 100%;
+    position: absolute;
+    right: -30px;
+    top: 0;
+}
+
+.myCard .main {
+    padding-right: 50px;
+    margin-top: 4px;
+}
+
+.myCard footer {
+    background-color: #e8676b;
+    grid-column-start: span 2;
+}
+
+.main .welcome {
+    background-color: #e8676b;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+
+.main .triangle {
+    box-sizing: border-box;
+    display: block;
+    border: 10px solid transparent;
+    position: absolute;
+    border-top-width: 0;
+    border-left-color: #e8676b;
+    left: 4px;
+    top: 100%;
+}
+
+.main h1 {
+    margin-top: 30px;
+    color: #3e4450;
+}
+
+.main h2 {
+    color: #3e4450;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.main hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0 0;
+}
+
+.main dt,
+dd {
+    margin: 0;
+    width: 30%;
+    float: left;
+    color: #3e4450;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.main dd {
+    font-weight: 400;
+    width: 50%;
+    color: #9da0a7;
+}
+
+.myCard footer svg {
+    width: 25px;
+    height: 25px;
+    fill: rgb(255, 255, 255);
+}
+
+.myCard footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myCard footer a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.myCard footer a:hover {
+    background-color: #d85358;
 }
