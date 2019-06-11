@@ -4,12 +4,35 @@
     clear: both;
 }
 
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('//at.alicdn.com/t/webfont_cadb7tfuiie.eot');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/webfont_cadb7tfuiie.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/webfont_cadb7tfuiie.woff2') format('woff2'), url('//at.alicdn.com/t/webfont_cadb7tfuiie.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/webfont_cadb7tfuiie.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/webfont_cadb7tfuiie.svg#AlibabaPuHuiTiL') format('svg');
+    /* iOS 4.1- */
+}
+
+.web-font {
+    font-family: "webfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 ul,
+ol,
 body,
 img,
 span,
 h1,
-h2 {
+h2,
+h3,
+h4 {
     margin: 0;
     padding: 0;
 }
@@ -74,7 +97,6 @@ body {
 
 .topBg {
     height: 515px;
-    /* background-color: red; */
     background: url(./images/20180129080919_CAsdU.jpeg) no-repeat;
     background-position: center;
     background-size: cover;
@@ -184,6 +206,10 @@ dd {
     color: #9da0a7;
 }
 
+.myCard {
+    box-shadow: 0 2px 6px rgb(170, 170, 170);
+}
+
 .myCard footer svg {
     width: 25px;
     height: 25px;
@@ -211,3 +237,197 @@ dd {
 .myCard footer a:hover {
     background-color: #d85358;
 }
+
+.downloadBox {
+    text-align: center;
+    margin: 40px 0 30px;
+}
+
+.downloadBox a {
+    color: #3e4450;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #cbcdcf;
+    padding: 18px 40px;
+    line-height: 60px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.downloadBox a:hover {
+    box-shadow: 0 8px 20px rgb(170, 170, 170);
+    transition: box-shadow 0.2s;
+}
+
+.introduction {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 940px;
+    text-align: center;
+}
+
+.introduction span {
+    line-height: 2;
+    font-size: 18px;
+}
+
+.skillBox {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+h3 {
+    font-size: 34px;
+    color: #3e4450;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.skillMain {
+    margin-top: 20px;
+    padding: 40px 35px 5px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 2px 6px rgb(170, 170, 170);
+}
+
+.skillMain>ol li {
+    float: left;
+    width: 50%;
+    margin-bottom: 35px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.skillMain>ol li:nth-child(2n) {}
+
+.skillMain h4 {
+    font-size: 14px;
+    color: #3e4450;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+.skillMain .skillBar {
+    background-color: #f7e2e2;
+    height: 5px;
+    border-radius: 2px;
+}
+
+.skillMain .skillBar>.progress {
+    width: 50%;
+    height: 5px;
+    background-color: #e8676b;
+    border-radius: 2px;
+}
+
+.projectBox {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.projectMain {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projectMain nav {
+    text-align: center;
+    display: inline-block;
+}
+
+.projectMain nav>ul {
+    display: inline-block;
+}
+
+.projectMain ul>li {
+    float: left;
+    padding: 30px 0 0 44px;
+    font-size: 13px;
+    color: #000;
+}
+
+.projectMain ul>li:hover {
+    cursor: pointer;
+}
+
+.projectMain ul>li:nth-child(1) {
+    padding-left: 0;
+}
+
+.projectMain .navBar {
+    margin-top: 8px;
+    height: 5px;
+    background: #fff;
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+}
+
+.projectMain .navBar>.navBar-inner {
+    transition: all 0.4s;
+}
+
+.projectMain .navBar>.navBar-inner.state-1 {
+    width: 40px;
+    background: #e8676b;
+    height: 5px;
+    border-radius: 2px;
+}
+
+.projectMain .navBar>.navBar-inner.state-2 {
+    width: 40px;
+    background: #e8676b;
+    border-radius: 2px;
+    height: 5px;
+    margin-left: 60px;
+}
+
+.projectMain .navBar>.navBar-inner.state-3 {
+    width: 79px;
+    background: #e8676b;
+    height: 5px;
+    border-radius: 2px;
+    margin-left: 137px;
+}
+
+.projectMain .projectInner {
+    position: relative;
+    height: 570px;
+    margin: 30px 0 100px;
+}
+
+.projectMain .projectInner img:nth-child(1) {
+    width: 625px;
+    height: 570px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.projectMain .projectInner img {
+    width: 315px;
+    height: 275px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+.projectMain .projectInner img:nth-child(3) {
+    width: 315px;
+    height: 275px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 295px;
+}
+
+
+/* .projectMain .projectInner img:nth-child(odd) {
+    padding-left: 0;
+} */

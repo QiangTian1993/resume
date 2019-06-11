@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- 导航栏 -->
     <div class="topNavBar">
         <div class="topNavBar-inner clearfix">
             <div class="logo">
@@ -29,7 +30,11 @@
             </nav>
         </div>
     </div>
+    <!-- END -->
+    <!-- 顶部背景 -->
     <div class="topBg"></div>
+    <!-- END -->
+    <!-- 个人信息 -->
     <div class="myCard">
         <img src="./images/34515969.png" alt="">
         <div class="main">
@@ -69,6 +74,98 @@
             </a>
         </footer>
     </div>
+    <!-- END -->
+    <!-- 下载简历 -->
+    <div class="downloadBox">
+        <a href="./resume.pdf" class="download" download="">DOWNLOAD RESUME</a>
+    </div>
+    <!-- END -->
+    <!-- 自我介绍 -->
+    <div class="introduction">
+        <span class="web-font">
+            你好！ 我是罗伯特史密斯。 专注于前端开发的高级Web开发人员。 具有动态Web项目开发周期的所有阶段的经验。 精通各种编程语言，包括JavaScript，SQL和C.在项目管理和客户关系方面的背景
+        </span>
+    </div>
+    <!-- END -->
+    <!-- 专业技能 -->
+    <div class="skillBox">
+        <h3>专业技能</h3>
+        <div class="skillMain">
+            <ol class="clearfix">
+                <li>
+                    <h4 class="web-font">HTML5 &amp; CSS3 </h4>
+                    <div class="skillBar">
+                        <div class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h4 class="web-font">Javascript</h4>
+                    <div class="skillBar">
+                        <div class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h4 class="web-font">jQuery</h4>
+                    <div class="skillBar">
+                        <div class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h4 class="web-font">Vue</h4>
+                    <div class="skillBar">
+                        <div class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h4 class="web-font">React</h4>
+                    <div class="skillBar">
+                        <div class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h4 class="web-font">HTTP</h4>
+                    <div class="skillBar">
+                        <div class="progress"></div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- END -->
+    <!-- 我的项目 -->
+    <div class="projectBox">
+        <h3>我的项目</h3>
+        <div class="projectMain">
+            <nav>
+                <ul>
+                    <li id="nav1">全部</li>
+                    <li id="nav2">框架</li>
+                    <li id="nav3">原生JS&amp;CSS</li>
+                </ul>
+                <div class="navBar">
+                    <div id="navBarInner" class="navBar-inner state-1"></div>
+                </div>
+            </nav>
+            <div class="projectInner">
+                <img src="./images/20150131135007_j5zM2.jpeg" alt="project1">
+                <img src="./images/20150517015033_i5Ze4.jpeg" alt="project1">
+                <img src="./images/b4959d8c023f8efa97240cec391f531e4f79d158d5d6-8BfVCg_fw658.jpeg" alt="project3">
+            </div>
+        </div>
+
+    </div>
+    <!-- END -->
 </body>
+<script>
+    nav1.onclick = function() {
+        navBarInner.className = "navBar-inner state-1"
+    }
+    nav2.onclick = function() {
+        navBarInner.className = "navBar-inner state-2"
+    }
+    nav3.onclick = function() {
+        navBarInner.className = "navBar-inner state-3"
+    }
+</script>
 
 </html>
