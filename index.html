@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Resume</title>
+    <link rel="stylesheet" href="loding.css">
     <link rel="stylesheet" href="style.css">
     <script src="//at.alicdn.com/t/font_1232665_5yn509upc7u.js"></script>
 </head>
 
 <body>
+    <article class="active" id="loding"></article>
     <!-- 导航栏 -->
-    <div class="topNavBar">
+    <div class="topNavBar" id="topNavBar">
         <div class="topNavBar-inner clearfix">
             <div class="logo">
                 <span class="rs">RS</span><span class="card">card</span>
             </div>
             <nav>
-                <ul class="clearfix">
+                <ul class="clearfix" id="navItems">
                     <li><a href="#">关于</a></li>
-                    <li><a href="#">技能</a></li>
+                    <li>
+                        <a href="#">技能</a>
+                        <ul id="navEject">
+                            <li>技能1</li>
+                            <li>技能2</li>
+                            <li>技能3</li>
+                        </ul>
+                    </li>
                     <li><a href="#">作品</a></li>
                     <li><a href="#">博客</a></li>
                     <li><a href="#">日历</a></li>
@@ -65,7 +74,7 @@
             <a href="#">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-github"></use>
-                 </svg>
+                </svg>
             </a>
             <a href="#">
                 <svg class="icon" aria-hidden="true">
@@ -156,16 +165,6 @@
     </div>
     <!-- END -->
 </body>
-<script>
-    nav1.onclick = function() {
-        navBarInner.className = "navBar-inner state-1"
-    }
-    nav2.onclick = function() {
-        navBarInner.className = "navBar-inner state-2"
-    }
-    nav3.onclick = function() {
-        navBarInner.className = "navBar-inner state-3"
-    }
-</script>
+<script src="main.js"></script>
 
 </html>
