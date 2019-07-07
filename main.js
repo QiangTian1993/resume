@@ -29,6 +29,26 @@ for (i = 0; i < li.length; i++) {
     }
 }
 
+//导航栏增加跳转锚点
+
+// 获取导航栏下的所有a标签
+let aTags = document.querySelectorAll('div.topNavBar-inner > nav > ul > li > a')
+for (let i = 0; i < aTags.length; i++) {
+    aTags[i].onclick = function (aTags) {
+        //清除a连接的默认跳转
+        aTags.preventDefault()
+        //获取当前监听的a标签
+        let aTarget = aTags.currentTarget
+        //获取当前a标签的href
+        let href = aTarget.getAttribute('href')
+        //获取id为href的元素
+        let element = document.querySelector(href)
+        //页面滚动高度等于id为href元素距窗口顶部的距离
+        window.scrollTo(0, element.offsetTop - 80)
+    }
+}
+
+
 
 //选择项目类型
 nav1.onclick = function () {
@@ -40,4 +60,5 @@ nav2.onclick = function () {
 nav3.onclick = function () {
     navBarInner.className = "navBar-inner state-3"
 }
+
 
