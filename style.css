@@ -49,16 +49,43 @@ body {
     background-color: #efefef;
 }
 
+@keyframes upSlide {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+[data-x].offset {
+    transform: translateY(150px);
+    opacity: 0;
+}
+
+@keyframes downSlide {
+    0% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .topNavBar {
     padding: 20px 0;
     position: fixed;
     top: 0;
-    width: 100%;
     z-index: 1;
     transition: all .3s;
     width: 100%;
     margin: 0 auto;
     color: #c1c3c6;
+    animation: downSlide .8s ease .3s;
 }
 
 .topNavBar.active {
@@ -135,6 +162,7 @@ body {
     background: #f5f5f5;
 }
 
+
 .topNavBar nav>ul>li.active > ul{
     display: block;
 }
@@ -152,7 +180,7 @@ body {
     }
 }
 
-.topNavBar nav>ul>li.active > a::after {
+.topNavBar nav>ul>li.active > a::after,.topNavBar nav>ul>li.highlight> a::after {
     content: "";
     display: block;
     position: absolute;
@@ -190,6 +218,7 @@ body {
     grid-template-rows: 400px 85px;
     margin-top: -340px;
     position: relative;
+    animation: upSlide .8s ease .3s;
 }
 
 .myCard img {
@@ -368,13 +397,20 @@ h3 {
     box-sizing: border-box;
 }
 
-.skillMain>ol li:nth-child(2n) {}
-
 .skillMain h4 {
     font-size: 14px;
     color: #3e4450;
     font-weight: normal;
     margin-bottom: 2px;
+}
+
+@keyframes skillBarLoad {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
 }
 
 .skillMain .skillBar {
@@ -383,11 +419,13 @@ h3 {
     border-radius: 2px;
 }
 
+
 .skillMain .skillBar>.progress {
     width: 50%;
     height: 5px;
     background-color: #e8676b;
     border-radius: 2px;
+    animation: skillBarLoad 1s linear 0.3s;
 }
 
 .projectBox {
