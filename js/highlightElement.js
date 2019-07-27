@@ -13,6 +13,8 @@
                 highlight()
                 for (let i = 0; i < view.length; i++) {
                     view[i].classList.add('offset')
+                    view[index].style.animation = 'upSlide .8s ease 0s'
+                    view[index].classList.remove('offset')
                 }
             }
             document.addEventListener('scroll', function () {
