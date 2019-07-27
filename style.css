@@ -24,15 +24,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-ul,
-ol,
-body,
-img,
-span,
-h1,
-h2,
-h3,
-h4 {
+ul, ol, body, img, span, h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
 }
@@ -47,6 +39,11 @@ li {
 
 body {
     background-color: #efefef;
+    padding-bottom: 200px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 @keyframes upSlide {
@@ -80,7 +77,7 @@ body {
     padding: 20px 0;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 10;
     transition: all .3s;
     width: 100%;
     margin: 0 auto;
@@ -92,12 +89,13 @@ body {
     padding: 10px 0;
     background: #fff;
     color: #000;
-    box-shadow: 0 4px 8px rgba(0,0,0,.2)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2)
 }
 
 .topNavBar-inner {
     max-width: 1550px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .topNavBar>.topNavBar-inner>.logo {
@@ -152,18 +150,17 @@ body {
     font-size: 12px;
     background: #fff;
     padding: 5px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     display: none;
     cursor: pointer;
     animation: ejectSlide .2s
 }
 
-#navEject > li:hover {
+#navEject>li:hover {
     background: #f5f5f5;
 }
 
-
-.topNavBar nav>ul>li.active > ul{
+.topNavBar nav>ul>li.active>ul {
     display: block;
 }
 
@@ -180,7 +177,7 @@ body {
     }
 }
 
-.topNavBar nav>ul>li.active > a::after,.topNavBar nav>ul>li.highlight> a::after {
+.topNavBar nav>ul>li.active>a::after, .topNavBar nav>ul>li.highlight>a::after {
     content: "";
     display: block;
     position: absolute;
@@ -287,8 +284,7 @@ body {
     margin: 20px 0 0;
 }
 
-.main dt,
-dd {
+.main dt, dd {
     margin: 0;
     width: 30%;
     float: left;
@@ -419,7 +415,6 @@ h3 {
     border-radius: 2px;
 }
 
-
 .skillMain .skillBar>.progress {
     width: 50%;
     height: 5px;
@@ -499,37 +494,141 @@ h3 {
     margin-left: 137px;
 }
 
-.projectMain .projectInner {
-    position: relative;
-    height: 570px;
-    margin: 30px 0 100px;
+.swiper-container {
+    width: 940px;
+    height: 580px;
+    margin-top: 40px;
+    box-shadow: 0 2px 6px rgb(170, 170, 170);
 }
 
-.projectMain .projectInner img:nth-child(1) {
-    width: 625px;
-    height: 570px;
-    position: absolute;
-    top: 0;
-    left: 0;
+.swiper-container .swiper-slide {
+    background-color: white;
 }
 
-.projectMain .projectInner img {
-    width: 315px;
-    height: 275px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-    top: 0;
-    object-fit: cover;
+.swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+    width: 58px;
+    height: 58px;
+    background-color: rgba(255, 255, 255, 0.5);
+    left: auto;
+    right: 24px;
+    top: 24px;
+    margin-top: 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-size: 14px;
+    fill: white;
+    background-image: url(./images/left.png)
 }
 
-.projectMain .projectInner img:nth-child(3) {
-    width: 315px;
-    height: 275px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-    top: 295px;
+.swiper-container .swiper-button-next {
+    top: 106px;
+    transform: scaleX(-1);
+}
+
+.swiper-container .swiper-button-prev:hover, .swiper-container .swiper-button-next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.message {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+.message main {
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 6px rgb(170, 170, 170);
+    margin-top: 40px;
+    padding: 50px;
+}
+
+.message main li {
+    margin-top: 50px;
+    display: flex;
+}
+
+.message main li:before {
+    content: "“";
+    display: block;
+    font-size: 70px;
+    color: #e8676b;
+    padding-right: 40px;
+    margin-top: -10px;
+}
+
+.message main li:first-child {
+    margin-top: 0;
+}
+
+.message .userMessage {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #3e4450;
+}
+
+.message .userMessage::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    margin-top: 20px;
+}
+
+.message .userName {
+    display: flex;
+    margin-top: 20px;
+}
+
+.message .userName img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.message .userName>div {
+    padding-left: 20px;
+}
+
+.message .userName div:first-child {
+    font-size: 20px;
+    color: #3e4450;
+}
+
+.message .userName div:last-child {
+    font-size: 14px;
+    color: #d0d0d0;
+}
+
+.message form {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.message input[type="text"]::placeholder {
+    color: #d0d0d0;
+}
+
+.message input[type="text"] {
+    flex: 6;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.message input[type="text"]:focus {
+    outline: none;
+}
+
+.message input[type="submit"] {
+    flex: 1;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    background: #e8676b;
+    color: #fff;
+    border: none;
 }

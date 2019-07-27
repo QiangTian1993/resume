@@ -8,6 +8,7 @@
     <title>Resume</title>
     <link rel="stylesheet" href="loding.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
     <script src="//at.alicdn.com/t/font_1232665_5yn509upc7u.js"></script>
 </head>
 
@@ -31,7 +32,7 @@
                         </ul>
                     </li>
                     <li><a href="#seitProject">作品</a></li>
-                    <li><a href="#4">博客</a></li>
+                    <li><a href="#seitmessage">留言板</a></li>
                     <li><a href="#5">日历</a></li>
                     <li><a href="#6">联系方式</a></li>
                     <li><a href="#7">其他</a></li>
@@ -155,17 +156,55 @@
                     <div id="navBarInner" class="navBar-inner state-1"></div>
                 </div>
             </nav>
-            <div class="projectInner">
-                <img src="./images/20150131135007_j5zM2.jpeg" alt="project1">
-                <img src="./images/20150517015033_i5Ze4.jpeg" alt="project1">
-                <img src="./images/b4959d8c023f8efa97240cec391f531e4f79d158d5d6-8BfVCg_fw658.jpeg" alt="project3">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <img class="swiper-slide" src="./images/myNav.jpg"></img>
+                    <img class="swiper-slide" src="./images/Drawing.jpg"></img>
+                    <img class="swiper-slide" src="./images/carousel.jpg"></img>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
-
+    </div>
+    <!-- END -->
+    <!-- 留言板 -->
+    <div class="message" id="seitmessage" data-x>
+        <h3>留言板</h3>
+        <main>
+            <form action="">
+                <input type="text" placeholder="留下你的足迹">
+                <input type="submit" value="提交">
+            </form>
+            <ol>
+                <li>
+                    <div>
+                        <div class="userMessage">Will send them a message. You ride out as fast as the wind can carry
+                            you.You tell the other clans to come. ell them Toruk Macto calls to them! You fly now, with
+                            me!
+                            My brothers! Sisters!</div>
+                        <div class="userName">
+                            <img src="./images/timg.jpeg" alt="">
+                            <div>
+                                <div>name</div>
+                                <div>2019.07.24</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </main>
     </div>
     <!-- END -->
 </body>
-<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+<script src="./js/lodingAndMenu.js"></script>
+<script src="./js/anchor.js"></script>
+<script src="./js/topNavBarAnimat.js"></script>
+<script src="./js/highlightElement.js"></script>
+<script src="./js/other.js"></script>
+<script src="./js/swiper.js"></script>
+<script src="./js/message.js"></script>
 
 </html>
