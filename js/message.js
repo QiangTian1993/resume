@@ -1,6 +1,7 @@
 {
     let APP_ID = 'tlWx7uOdL7tCxFEiI7tGnKhk-gzGzoHsz';
     let APP_KEY = 'NIbjwxH5o2pzWtz3A3mOJUn5';
+    let timeArray = []
 
     AV.init({
         appId: APP_ID,
@@ -29,11 +30,10 @@
     })
     var query = new AV.Query('Messages');
     query.find().then(function (messages) {
-
+        messages.reverse()
         let array = messages.map((items) => {
             return { 'message': items.attributes.message, 'id': items.attributes.name }
         })
-        array.reverse()
         for (let i = 0; i < array.length; i++) {
             let li = createElement('li')
             let div = createElement('div')
@@ -46,9 +46,10 @@
             let div6 = createElement('div')
             let dateArray = new Date(messages[i].updatedAt)
             let img = createElement('img')
-            let timeArray = dateArray.getFullYear() + '.' + (dateArray.getMonth() + 1) + '.' + dateArray.getDate()
+            let time = dateArray.getFullYear() + '.' + (dateArray.getMonth() + 1) + '.' + dateArray.getDate()
+
             div5.textContent = array[i].id
-            div6.textContent = timeArray
+            div6.textContent = time
             img.src = "./images/timg.jpeg"
             div2.textContent = array[i].message
             div1[i].appendChild(div2).classList.add('userMessage')
@@ -62,4 +63,5 @@
     function createElement(element) {
         return document.createElement(element)
     }
+
 }
